@@ -1,0 +1,29 @@
+/*=========================================================================
+|| FILE: Drop
+===========================================================================
+|| Category: 
+||  animation
+|| Changlelog:
+||  21.02.19 - add
+/*=======================================================================*/
+
+/* @keyframes */
+@keyframes animation-drop {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1.0);
+        opacity: 0;
+    }
+}
+
+/* Element */
+.animation-drop {
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+    background-color: @color-primary;
+    border-radius: 100%;
+    animation: animation-drop 1.0s infinite ease-in-out;
+}
