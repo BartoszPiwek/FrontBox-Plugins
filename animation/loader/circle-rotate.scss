@@ -1,7 +1,7 @@
 /*
 Circle rotate
 
-HTML:
+Markup:
 <div class="animation-circle-rotate"></div>
 
 Style guide: Animation.circle rotate 
@@ -18,7 +18,7 @@ Style guide: Animation.circle rotate
 }
 
 .animation-circle-rotate {
-	display: block;
+	display: inline-block;
 	position: relative;
 	width: 30px;
 	height: 30px;

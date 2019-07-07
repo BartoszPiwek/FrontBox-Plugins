@@ -1,0 +1,50 @@
+/*=========================================================================
+|| Plugin: wcag.less
+===========================================================================
+|| REQUIRED frontbox/wcag.js
+=========================================================================*/
+
+.js_wcag-focus {
+	outline: 4px solid #0e5ca4;
+
+	// No focus
+	&--ignore {
+		outline: none !important;
+	}
+}
+
+.wcag-skip {
+	position: absolute;
+	z-index: -10;
+	top: 0;
+	left: -9999px;
+	padding: 10px 20px;
+	transition: opacity $time-transition;
+	opacity: 0;
+	background-color: color("black");
+	color: color("primary");
+
+	&:before {
+		content: "";
+		display: block;
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translateY(100%);
+		// .add-triangle(10,10,bottom,color('black'));
+	}
+}
+
+.js_wcag-focus {
+	.wcag-skip {
+		z-index: 9990;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		outline: 4px solid color("primary");
+
+		&:focus {
+			opacity: 1;
+		}
+	}
+}

@@ -1,7 +1,7 @@
 /*
 Drop
 
-HTML:
+Markup:
 <div class="animation-drop"></div>
 
 Style guide: Animation.drop
@@ -19,6 +19,7 @@ Style guide: Animation.drop
 }
 
 .animation-drop {
+	display: inline-block;
 	width: 40px;
 	height: 40px;
 	margin: 0 auto;

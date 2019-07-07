@@ -1,7 +1,7 @@
 /*
 Scale lines
 
-HTML:
+Markup:
 <div class="animation-scale-lines">
     <span></span>
     <span></span>
@@ -24,25 +24,23 @@ Style guide: Animation.scale lines
 }
 
 .animation-scale-lines {
-	display: block;
+	display: inline-flex;
 	position: relative;
-	height: 40px;
-	text-align: center;
+	align-items: center;
+	justify-content: center;
+	height: 36px;
+	margin: 0 auto;
 
-	> span,
-	.v-center__content > span {
+	> span {
 		display: inline-block;
-		position: absolute;
-		top: 50%;
-		left: 50%;
 		width: 6px;
 		height: 60%;
-		transform: translate(-50%, -50%);
+		margin-left: 6px;
 		animation: animation-scale-lines 0.6s infinite alternate;
 		background-color: color("primary");
 
 		&:first-child {
-			margin-left: 12px;
+			margin-left: 0;
 		}
 
 		&:nth-child(2) {
@@ -50,7 +48,6 @@ Style guide: Animation.scale lines
 		}
 
 		&:nth-child(3) {
-			margin-left: -12px;
 			animation-delay: 0.4s;
 		}
 	}

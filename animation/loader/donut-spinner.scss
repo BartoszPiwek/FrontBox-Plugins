@@ -1,7 +1,7 @@
 /*
 Donut spinner
 
-HTML:
+Markup:
 <div class="animation-donut-spinner"></div>
 
 Style guide: Animation.donut spinner
@@ -18,14 +18,24 @@ Style guide: Animation.donut spinner
 }
 
 .animation-donut-spinner {
+	display: inline-block;
+	position: relative;
+	width: 30px;
+	height: 30px;
+	margin: 0 auto;
 	font-size: 0;
 	text-align: center;
 
 	&:before {
 		content: "";
 		display: inline-block;
-		width: 30px;
-		height: 30px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		box-sizing: border-box;
+		width: 100%;
+		height: 100%;
+		margin: 0;
 		animation: animation-donut-spinner 1.2s linear infinite;
 		border: 4px solid rgba(0, 0, 0, 0.1);
 		border-radius: 50%;

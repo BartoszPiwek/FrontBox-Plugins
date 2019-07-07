@@ -1,0 +1,120 @@
+/*
+Timeline
+
+Flip element content
+
+Markup:
+<div class="timeline">
+    <div class="timeline__container">
+        <div class="timeline__item">
+            <div class="timeline__dot"></div>
+            <div class="timeline__text">Item 1</div>
+        </div>
+        <div class="timeline__item">
+            <div class="timeline__dot"></div>
+            <div class="timeline__text">Item 2</div>
+        </div>
+        <div class="timeline__item">
+            <div class="timeline__dot"></div>
+            <div class="timeline__text">Item 3</div>
+        </div>
+    </div>
+</div>
+
+Style guide: Blocks.timeline
+*/
+
+.timeline {
+	&__text {
+		color: color("black");
+		font-size: 14px;
+	}
+
+	&__dot {
+		width: 20px;
+		height: 20px;
+		border-radius: 50%;
+		background-color: color("primary");
+	}
+
+	&__item {
+		&.active {
+			.timeline__dot {
+				&:before {
+					width: 40%;
+					height: 40%;
+					border-radius: 50%;
+					background-color: color("white");
+				}
+			}
+		}
+	}
+
+	&__container {
+		> .timeline__item {
+			&:before {
+				top: 20px / 2 - 2/2;
+				width: 100%;
+				height: 2px;
+				background-color: transparentize(color("primary"), 0.4);
+			}
+		}
+	}
+}
+
+.timeline {
+	&__item {
+		position: relative;
+		flex: 1 0 0px;
+
+		&.active {
+			.timeline__dot {
+				&:before {
+					content: "";
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+				}
+			}
+		}
+	}
+
+	&__container {
+		display: flex;
+		text-align: center;
+
+		> .timeline__item {
+			z-index: 1;
+
+			&:before {
+				content: "";
+				display: block;
+				position: absolute;
+				z-index: -1;
+				left: 0;
+				width: 100%;
+			}
+
+			&:first-child {
+				&:before {
+					left: 50%;
+					width: 50%;
+				}
+			}
+
+			&:last-child {
+				&:before {
+					left: 0;
+					width: 50%;
+				}
+			}
+		}
+	}
+
+	&__dot {
+		display: block;
+		position: relative;
+		margin: 0 auto;
+	}
+}
