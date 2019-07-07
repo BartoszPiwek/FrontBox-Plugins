@@ -1,0 +1,34 @@
+/*
+Donut spinner
+
+HTML:
+<div class="animation-donut-spinner"></div>
+
+Style guide: Animation.donut spinner
+*/
+
+@keyframes animation-donut-spinner {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+.animation-donut-spinner {
+	font-size: 0;
+	text-align: center;
+
+	&:before {
+		content: "";
+		display: inline-block;
+		width: 30px;
+		height: 30px;
+		animation: animation-donut-spinner 1.2s linear infinite;
+		border: 4px solid rgba(0, 0, 0, 0.1);
+		border-radius: 50%;
+		border-left-color: color("primary");
+	}
+}

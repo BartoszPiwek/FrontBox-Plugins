@@ -1,0 +1,28 @@
+/*
+Drop
+
+HTML:
+<div class="animation-drop"></div>
+
+Style guide: Animation.drop
+*/
+
+@keyframes animation-drop {
+	0% {
+		transform: scale(0);
+	}
+
+	100% {
+		transform: scale(1);
+		opacity: 0;
+	}
+}
+
+.animation-drop {
+	width: 40px;
+	height: 40px;
+	margin: 0 auto;
+	animation: animation-drop 1s infinite ease-in-out;
+	border-radius: 100%;
+	background-color: color("primary");
+}

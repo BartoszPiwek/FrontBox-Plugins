@@ -1,0 +1,75 @@
+{
+	/* Guard */
+	"Guard: if": {
+		"prefix": "if",
+		"body": [
+			"@if ($${1:value} == ${2:'true'}) {",
+			"\t$3",
+			"}"
+		]
+	},
+	"Guard: if/else": {
+		"prefix": "if/else",
+		"body": [
+			"@if ($1 == ${2:'true'}) {",
+			"\t$3",
+			"} @else {",
+			"\t$4",
+			"}"
+		]
+	},
+	/* Loop */
+	"Loop: for": {
+		"prefix": "for",
+		"body": [
+			"@for $i from 1 through ${1:10}",
+			"\t$2",
+			"}"
+		]
+	},
+	/* Variable list */
+	"Variable list: color": {
+		"prefix": "color",
+		"body": [
+			"color('$1')"
+		]
+	},
+	"Variable list: index": {
+		"prefix": "index",
+		"body": [
+			"index('$1')"
+		]
+	},
+	// Media Queries
+	"Media queries: default": {
+		"prefix": "media",
+		"body": [
+			"@include media('$1') {",
+			"\t$2",
+			"}"
+		]
+	},
+	"Media queries: default max": {
+		"prefix": "media-max",
+		"body": [
+			"@include media-max('$1') {",
+			"\t$2",
+			"}"
+		]
+	},
+	"Media queries: special": {
+		"prefix": "media-special",
+		"body": [
+			"@include media-special('$1') {",
+			"\t$2",
+			"}"
+		]
+	},
+	// Functions
+	"Functions: scrollbar": {
+		"prefix": "include_scrollbar",
+		"body": [
+			"@include scrollbar();"
+		]
+	},
+}

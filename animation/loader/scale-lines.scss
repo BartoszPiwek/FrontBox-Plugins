@@ -1,0 +1,57 @@
+/*
+Scale lines
+
+HTML:
+<div class="animation-scale-lines">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+
+Style guide: Animation.scale lines
+*/
+
+@keyframes animation-scale-lines {
+	from {
+		height: 60%;
+		opacity: 0.8;
+	}
+
+	to {
+		height: 100%;
+		opacity: 1;
+	}
+}
+
+.animation-scale-lines {
+	display: block;
+	position: relative;
+	height: 40px;
+	text-align: center;
+
+	> span,
+	.v-center__content > span {
+		display: inline-block;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 6px;
+		height: 60%;
+		transform: translate(-50%, -50%);
+		animation: animation-scale-lines 0.6s infinite alternate;
+		background-color: color("primary");
+
+		&:first-child {
+			margin-left: 12px;
+		}
+
+		&:nth-child(2) {
+			animation-delay: 0.2s;
+		}
+
+		&:nth-child(3) {
+			margin-left: -12px;
+			animation-delay: 0.4s;
+		}
+	}
+}
