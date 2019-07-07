@@ -1,0 +1,49 @@
+/*
+Breadcrumbs
+
+Flip element content
+
+Markup:
+<div class="breadcrumbs">
+  <div class="breadcrumbs__item">
+    <a href="#" class="link">Link</a>
+  </div>
+  <div class="breadcrumbs__item">
+    <a href="#" class="link">Link</a>
+  </div>
+  <div class="breadcrumbs__item">
+    <a href="#" class="link">Link</a>
+  </div>
+</div>
+
+Style guide: Elements.breadcrumbs
+*/
+
+.breadcrumbs {
+	color: color("black");
+	font-size: 16px;
+	vertical-align: middle;
+
+	&__item {
+		display: inline-block;
+		position: relative;
+		padding-left: 15px;
+
+		&:before {
+			content: "<";
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			color: color("primary");
+		}
+
+		&:first-child {
+			padding-left: 0;
+
+			&:before {
+				content: none;
+			}
+		}
+	}
+}

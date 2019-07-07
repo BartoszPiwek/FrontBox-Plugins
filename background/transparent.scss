@@ -1,0 +1,19 @@
+/*
+Transparent
+
+Markup:
+<div class="block-transparent" style="min-height: 40px;"></div>
+
+Style guide: Elements.transparent
+*/
+
+.block-transparent {
+	width: auto;
+	max-width: 100%;
+	height: auto;
+
+	background-image: linear-gradient(45deg, #c4c4c4 25%, transparent 25%, transparent 75%, #c4c4c4 75%, #c4c4c4), linear-gradient(45deg, #c4c4c4 25%, transparent 25%, transparent 75%, #c4c4c4 75%, #c4c4c4);
+	background-position: 0 0, 10px 10px;
+	background-size: 20px 20px;
+	vertical-align: top;
+}
