@@ -18,8 +18,8 @@ Style guide: JavaScript.validator
 */
 
 .input-error {
-	border-color: color("danger") !important;
-	color: color("danger") !important;
+	border-color: color("error") !important;
+	color: color("error") !important;
 
 	&--absolute + *:not([class]) {
 		padding-top: 20px;
@@ -28,7 +28,7 @@ Style guide: JavaScript.validator
 			display: block;
 			position: relative;
 			padding: 6px;
-			border: 1px solid color("danger");
+			border: 1px solid color("error");
 			border-radius: 4px;
 			background-color: color("white");
 			font-size: 13px;
@@ -41,7 +41,7 @@ Style guide: JavaScript.validator
 				top: 0;
 				left: 50%;
 				transform: translate(-50%, -100%);
-				// .add-triangle( 10, 10, top, color('danger'));
+				// .add-triangle( 10, 10, top, color('error'));
 			}
 		}
 
@@ -78,7 +78,7 @@ Style guide: JavaScript.validator
 					right: 0;
 					left: auto;
 					transform: translate(100%, -50%);
-					// .add-triangle( 10, 10, right, color('danger'));
+					// .add-triangle( 10, 10, right, color('error'));
 				}
 			}
 		}
